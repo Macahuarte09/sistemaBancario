@@ -12,7 +12,7 @@ public class CuentaEntity extends BaseEntity{
     Long titular;
 
     public CuentaEntity(Cuenta cuenta) {
-        super(cuenta.getNumeroCuenta());
+        super(Long.parseLong(cuenta.getNumeroCuenta()));
         this.nombre = cuenta.getNombre();
         this.balance = cuenta.getBalance();
         this.tipoCuenta = cuenta.getTipoCuenta().toString();
@@ -20,3 +20,4 @@ public class CuentaEntity extends BaseEntity{
         this.fechaCreacion = cuenta.getFechaCreacion();
     }
 }
+

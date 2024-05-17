@@ -9,7 +9,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 
-public class CuentaInputProcessor extends BaseInputProcessor {
+public class
+CuentaInputProcessor extends BaseInputProcessor {
 
     private static final Scanner scanner = new Scanner(System.in);
 
@@ -206,7 +207,7 @@ public static void mostrarMovimientos(List<Cliente> clientes) {
     System.out.print("Ingrese el número de cuenta para ver los movimientos: ");
     String numeroCuenta = scanner.nextLine();
 
-    // Buscar la cuenta correspondiente al número de cuenta ingresado
+    // Buscar la cuenta correspondiente al número de cuenta
     Cuenta cuentaSeleccionada = null;
     for (Cliente cliente : clientes) {
         for (Cuenta cuenta : cliente.getCuentas()) {
@@ -231,7 +232,6 @@ public static void mostrarMovimientos(List<Cliente> clientes) {
         for (Movimiento movimiento : cuentaSeleccionada.getMovimientos()) {
             System.out.println("Tipo de movimiento: " + movimiento.getTipoMovimiento());
             System.out.println("Monto: " + movimiento.getMonto());
-            // Formatear la fecha y hora en el formato deseado
             String fechaHoraFormateada = movimiento.getFechaHora().format(formatter);
             System.out.println("Fecha y hora: " + fechaHoraFormateada);
             System.out.println("-------------------------");

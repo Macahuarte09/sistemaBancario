@@ -27,7 +27,7 @@ public class ClienteEntity extends BaseEntity {
         if (cliente.getCuentas() != null && !cliente.getCuentas().isEmpty()) {
             this.cuentas = new ArrayList<>();
             for (Cuenta c: cliente.getCuentas()) {
-                cuentas.add(c.getNumeroCuenta());
+                cuentas.add(Long.parseLong(c.getNumeroCuenta()));
             }
         }
     }
@@ -36,7 +36,7 @@ public class ClienteEntity extends BaseEntity {
         if (cuentas == null){
             cuentas = new ArrayList<>();
         }
-        cuentas.add(cuenta.getNumeroCuenta());
+        cuentas.add(Long.parseLong(cuenta.getNumeroCuenta()));
     }
 
     public Cliente toCliente() {

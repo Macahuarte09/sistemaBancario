@@ -146,4 +146,3 @@ public class MenuInputProcessor extends BaseInputProcessor {
     }
 
 }
-

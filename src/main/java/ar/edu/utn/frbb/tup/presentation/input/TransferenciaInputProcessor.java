@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TransferenciaInputProcessor extends BaseInputProcessor{
-	
 	private static final Scanner scanner = new Scanner(System.in);
 	
 	public static void transferir(List<Cliente> clientes) {
@@ -32,8 +31,7 @@ public class TransferenciaInputProcessor extends BaseInputProcessor{
 	            }
 	            monto = scanner.nextDouble();
 	        } while (monto <= 0); // Mientras el monto sea mayor que 0.
-
-	        scanner.nextLine(); // Consumir el salto de línea
+	        scanner.nextLine();
 
 	        // Validar la transferencia
 	        Transferencia transferencia = new Transferencia(cuentaOrigen, cuentaDestino, monto);
@@ -41,8 +39,6 @@ public class TransferenciaInputProcessor extends BaseInputProcessor{
 	            // Realizar la transferencia
 	            if (cuentaOrigen.retirar(monto)) {
 	                cuentaDestino.depositar(monto);
-
-	                // Registrar la transferencia en las cuentas
 	                cuentaOrigen.agregarMovimiento(new Movimiento(Movimiento.TipoMovimiento.TRANSFERENCIA_SALIDA, monto));
 	                cuentaDestino.agregarMovimiento(new Movimiento(Movimiento.TipoMovimiento.TRANSFERENCIA_ENTRADA, monto));
 
@@ -55,8 +51,6 @@ public class TransferenciaInputProcessor extends BaseInputProcessor{
 	        System.out.println("Error. Una de las cuentas especificadas no existe.");
 	    }
 	}
-	
-	// Método auxiliar para buscar una cuenta por su número en la lista de clientes
     private static Cuenta buscarCuenta(List<Cliente> clientes, String numeroCuenta) {
         for (Cliente cliente : clientes) {
             for (Cuenta cuenta : cliente.getCuentas()) {

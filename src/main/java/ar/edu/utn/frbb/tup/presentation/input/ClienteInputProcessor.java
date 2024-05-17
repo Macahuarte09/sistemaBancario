@@ -112,14 +112,14 @@ public class ClienteInputProcessor extends BaseInputProcessor {
 
         // Validación de tipo de persona.
         while (!tipoPersonaStr.equals("F") && !tipoPersonaStr.equals("J")) {
-            System.out.println("Tipo de persona inválido. Ingrese FISICA (F) o JURIDICA (J): ");
+            System.out.println("Tipo de persona inválido. Ingrese fisica (F) o juridica (J): ");
             tipoPersonaStr = scanner.nextLine().toUpperCase();
         }
         TipoPersona tipoPersona = TipoPersona.fromString(tipoPersonaStr);
         cliente.setTipoPersona(tipoPersona);
 
         // Ingreso del banco del cliente.
-        System.out.print("Ingrese el banco del cliente: ");
+        System.out.print("Ingrese el banco al que pertenece: ");
         String banco = scanner.nextLine().trim();
         
         // Validación que el banco no este vacío.
@@ -130,7 +130,7 @@ public class ClienteInputProcessor extends BaseInputProcessor {
         cliente.setBanco(banco);
 
         // Ingreso y validación de fecha de alta del cliente.
-        System.out.print("Ingrese la fecha de alta del cliente (Formato: YYYY-MM-DD): ");
+        System.out.print("Ingrese la fecha de alta del cliente (Formato: Año-Mes-Dia): ");
         LocalDate fechaAlta = null;
         boolean fechaValida = false;
         while (!fechaValida) {
@@ -138,12 +138,10 @@ public class ClienteInputProcessor extends BaseInputProcessor {
                 fechaAlta = LocalDate.parse(scanner.nextLine());
                 fechaValida = true;
             } catch (Exception e) {
-                System.out.print("Formato de fecha inválido. Ingrese la fecha en formato YYYY-MM-DD: ");
+                System.out.print("Formato de fecha inválido. Ingrese la fecha (Formato: Año-Mes-Dia): ");
             }
         }
         cliente.setFechaAlta(fechaAlta);
-     
-
         clearScreen();
         return cliente;
     }
@@ -273,12 +271,12 @@ public class ClienteInputProcessor extends BaseInputProcessor {
                 LocalDate nuevaFechaAlta = null;
                 boolean fechaValida = false;
                 do {
-                    System.out.print("Ingrese la nueva fecha de alta (Formato: YYYY-MM-DD): ");
+                    System.out.print("Ingrese la nueva fecha de alta (Formato: Año-Mes-Dia): ");
                     try {
                         nuevaFechaAlta = LocalDate.parse(scanner.nextLine().trim());
                         fechaValida = true;
                     } catch (Exception e) {
-                        System.out.print("Formato de fecha inválido. Ingrese la fecha en formato YYYY-MM-DD: ");
+                        System.out.print("Formato de fecha inválido. Ingrese la fecha (Formato: Año-Mes-Dia): ");
                     }
                 } while (!fechaValida);
                 cliente.setFechaAlta(nuevaFechaAlta);
@@ -300,8 +298,7 @@ public class ClienteInputProcessor extends BaseInputProcessor {
         // Pedir al usuario que seleccione el cliente a eliminar
         System.out.print("Seleccione el cliente que desea eliminar (1-" + clientes.size() + "): ");
         int clienteIndex = scanner.nextInt();
-        scanner.nextLine(); // Consumir el salto de línea
-
+        scanner.nextLine();
         if (clienteIndex < 1 || clienteIndex > clientes.size()) {
             System.out.println("Selección inválida.");
             return;
