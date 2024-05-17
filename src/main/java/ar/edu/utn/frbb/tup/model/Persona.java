@@ -1,6 +1,7 @@
 package ar.edu.utn.frbb.tup.model;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Persona {
     private String nombre;
@@ -46,6 +47,11 @@ public class Persona {
     public String getDireccion() {
         return direccion;
 
+    }
+    public int getEdad() {
+        LocalDate currentDate = LocalDate.now();
+        Period agePeriod = Period.between(fechaNacimiento, currentDate);
+        return agePeriod.getYears();
     }
 
     public void setTelefono(Long telefono) {

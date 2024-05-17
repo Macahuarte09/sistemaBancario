@@ -47,7 +47,7 @@ public class Cuenta {
     }
 
     // Métodos getter y setter
-    public Long getNumeroCuenta() {
+    public String getNumeroCuenta() {
         return numeroCuenta;
     }
 
