@@ -1,7 +1,6 @@
-package ar.edu.utn.frbb.tup.Model;
+package ar.edu.utn.frbb.tup.model;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 

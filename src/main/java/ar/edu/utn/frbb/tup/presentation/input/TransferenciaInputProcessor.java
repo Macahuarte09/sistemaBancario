@@ -1,9 +1,9 @@
-package ar.edu.utn.frbb.tup.Input;
+package ar.edu.utn.frbb.tup.presentation.input;
 
-import ar.edu.utn.frbb.tup.Model.Cliente;
-import ar.edu.utn.frbb.tup.Model.Cuenta;
-import ar.edu.utn.frbb.tup.Model.Movimiento;
-import ar.edu.utn.frbb.tup.Model.Transferencia;
+import ar.edu.utn.frbb.tup.model.Cliente;
+import ar.edu.utn.frbb.tup.model.Cuenta;
+import ar.edu.utn.frbb.tup.model.Movimiento;
+import ar.edu.utn.frbb.tup.model.Transferencia;
 
 import java.util.List;
 import java.util.Scanner;

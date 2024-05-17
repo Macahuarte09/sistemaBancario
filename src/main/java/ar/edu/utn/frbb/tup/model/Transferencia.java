@@ -1,4 +1,4 @@
-package ar.edu.utn.frbb.tup.Model;
+package ar.edu.utn.frbb.tup.model;
 
 public class Transferencia {
 	

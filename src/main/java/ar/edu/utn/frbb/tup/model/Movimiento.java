@@ -1,4 +1,4 @@
-package ar.edu.utn.frbb.tup.Model;
+package ar.edu.utn.frbb.tup.model;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

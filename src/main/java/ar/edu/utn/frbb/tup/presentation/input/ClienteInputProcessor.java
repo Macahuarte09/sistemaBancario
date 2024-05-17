@@ -1,7 +1,7 @@
-package ar.edu.utn.frbb.tup.Input;
+package ar.edu.utn.frbb.tup.presentation.input;
 
-import ar.edu.utn.frbb.tup.Model.Cliente;
-import ar.edu.utn.frbb.tup.Model.TipoPersona;
+import ar.edu.utn.frbb.tup.model.Cliente;
+import ar.edu.utn.frbb.tup.model.TipoPersona;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

@@ -1,12 +1,6 @@
 package ar.edu.utn.frbb.tup;
-import ar.edu.utn.frbb.tup.Input.MenuInputProcessor;
-import ar.edu.utn.frbb.tup.Model.Banco;
-import ar.edu.utn.frbb.tup.Model.Cuenta;
-import ar.edu.utn.frbb.tup.Model.Cliente;
-
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.ArrayList;
+import ar.edu.utn.frbb.tup.presentation.input.MenuInputProcessor;
+import ar.edu.utn.frbb.tup.model.Banco;
 
 public class Main {
 

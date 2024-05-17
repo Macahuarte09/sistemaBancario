@@ -1,8 +1,8 @@
-package ar.edu.utn.frbb.tup.Input;
+package ar.edu.utn.frbb.tup.presentation.input;
 
-import ar.edu.utn.frbb.tup.Model.Cliente;
-import ar.edu.utn.frbb.tup.Model.Cuenta;
-import ar.edu.utn.frbb.tup.Model.Movimiento;
+import ar.edu.utn.frbb.tup.model.Cliente;
+import ar.edu.utn.frbb.tup.model.Cuenta;
+import ar.edu.utn.frbb.tup.model.Movimiento;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -18,7 +18,7 @@ public class CuentaInputProcessor extends BaseInputProcessor {
     	// Para crear una cuenta si o si el DNI debe coincidir con un cliente ya generado.
         long dniCliente;
         do {
-            System.out.print("Ingrese el DNI del cliente para asociar la cuenta (8 dígitos numéricos): ");
+            System.out.print("Ingresar el DNI(8 dígitos): ");
             while (!scanner.hasNextLong()) {
                 System.out.println("Por favor, ingrese un número válido para el DNI."); // En caso de escribir mal el DNI.
                 scanner.next(); // Consumir el valor inválido

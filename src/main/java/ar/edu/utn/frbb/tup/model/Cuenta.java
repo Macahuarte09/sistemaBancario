@@ -1,10 +1,23 @@
-package ar.edu.utn.frbb.tup.Model;
+package ar.edu.utn.frbb.tup.model;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cuenta {
+
+
+    public String getNombre() {
+        return null;
+    }
+
+    public int getBalance() {
+        return 0;
+    }
+
+    public Persona getTitular() {
+        return null;
+    }
 
     // Enumeración para representar el tipo de cuenta
     public enum TipoCuenta {
@@ -34,7 +47,7 @@ public class Cuenta {
     }
 
     // Métodos getter y setter
-    public String getNumeroCuenta() {
+    public Long getNumeroCuenta() {
         return numeroCuenta;
     }
 

@@ -1,4 +1,4 @@
-package ar.edu.utn.frbb.tup.Input;
+package ar.edu.utn.frbb.tup.presentation.input;
 
 import java.util.Scanner;
 
